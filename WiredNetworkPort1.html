@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>智能网关管理</title>
+    <link rel="stylesheet" href="decoration.css">
+    <script type="text/javascript"
+            src="jquery.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <h2>
+        智能网关管理
+    </h2>
+</div>
+<div class="mainBox">
+    <div class="leftBox">
+        <div class="menuItem zzjg">
+            <a href="WiredNetworkPort1.html">采集端口配置</a>
+        </div>
+        <div class="menuItem ygfc">
+            <a href="ModbusTcp.html">采集协议配置</a>
+        </div>
+        <div class="menuItem wghf">
+            <a href="WiredNetworkPort2.html">输出端口配置</a>
+        </div>
+        <div class="menuItem xxyd">
+            <a href="MqttProtocol.html">输出协议配置</a>
+        </div>
+        <div class="menuItem tzgg">
+            <a href=" ">恢复默认配置</a>
+        </div>
+    </div>
+    <div class="rightBox">
+        <form action="">
+            <div class="block">
+                <label for="采集端口">采集端口</label>
+                <select>
+                    <option value="有线网口1">有线网口1</option>
+                    <option value="RS232">RS232</option>
+                    <option value="RS485">RS485</option>
+                    <option value="AI-CH1">AI-CH1</option>
+                    <option value="AI-CH2">AI-CH2</option>
+                </select>
+            </div>
+            <div class="block">
+                <label for="IP地址">IP地址</label>
+                <input type="IPdizhi" name="IP地址">
+            </div>
+            <div class="block">
+                <label for="子网掩码">子网掩码</label>
+                <input type="ziwangyanma" name="子网掩码">
+            </div>
+            <div class="block">
+                <label for="网关">网关</label>
+                <!--<textarea name="网关" cols="30" rows="10"></textarea>-->
+                <input type="wangguan" name="网关">
+            </div>
+            <div class="block">
+                <label for="DNS">DNS</label>
+                <input type="DNS" name="DNS">
+            </div>
+            <div class="block center">
+                <input type="submit" value="保存">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>智能网关管理</title>
+    <link rel="stylesheet" href="decoration.css">
+    <script>
+        function ShowImage(page, tag) {
+            var i = 1;
+            var el;
+            while (el = document.getElementById(tag + i)) {
+                if (i == page)
+                    el.style.display = 'block';
+                else
+                    el.style.display = 'none';
+                i++;
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div class="header">
+    <h2>
+        智能网关管理
+    </h2>
+</div>
+<div class="mainBox">
+    <div class="leftBox">
+        <div class="menuItem zzjg">
+            <a href="WiredNetworkPort1.html">采集端口配置</a>
+        </div>
+        <div class="menuItem ygfc">
+            <a href="ModbusTcp.html">采集协议配置</a>
+        </div>
+        <div class="menuItem wghf">
+            <a href="WiredNetworkPort2.html">输出端口配置</a>
+        </div>
+        <div class="menuItem xxyd">
+            <a href="MqttProtocol.html">输出协议配置</a>
+        </div>
+        <div class="menuItem tzgg">
+            <a href=" ">恢复默认配置</a>
+        </div>
+    </div>
+    <div class="rightBox">
+        <form>
+            <label for="输出协议">输出协议</label>
+            <select onchange="ShowImage(parseInt(this.value), 'image');">
+                <option selected="selected" value="1">MQTT</option>
+                <option value="2">MODBUS服务器</option>
+            </select><br>
+            <div style="display: block" id="image1">
+                <label for="服务器地址">服务器地址</label>
+                <input type="serverdizhi" name="服务器地址"><br>
+                <label for="ClientID">ClientID</label>
+                <input type="ClientID" name="ClientID"><br>
+                <label for="UserName">UserName</label>
+                <!--<textarea name="网关" cols="30" rows="10"></textarea>-->
+                <input type="UserName" name="UserName"><br>
+                <label for="Password">Password</label>
+                <input type="Password" name="Password">
+            </div>
+            <div style="display:none" id="image2">
+                <label for="服务器IP">服务器IP</label>
+                <input type="serverip" name="服务器ip"><br>
+                <label for="服务器端口">服务器端口</label>
+                <input type="ServerPort" name="ServerPort"><br>
+            </div>
+
+
+            <div class="block center">
+                <input type="submit" value="保存">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
